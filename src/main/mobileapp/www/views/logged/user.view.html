@@ -1,5 +1,5 @@
 <ion-view cache-view="false" hide-back-button="true" class="pane">
- <ion-header-bar class="bar bar-header bar-positive" xattr-theme="bar-positive" data-component="crn-ion-header-bar">
+ <ion-header-bar class="bar bar-header bar-assertive" xattr-theme="bar-assertive" data-component="crn-ion-header-bar">
       <div side="left" class="buttons buttons-left header-item">
         <button class="button button-clear" ng-if="!User.inserting &amp;&amp; !User.editing" menu-toggle="left" data-component="crn-button" xattr-type="button-clear"> <i class="icon ion-navicon"></i> </button>
         <button class="button button-clear" ng-if="User.inserting || User.editing" ng-click="User.cancel()" data-component="crn-button" xattr-type="button-clear"> <i class="icon ion-ios-arrow-back"></i> </button>
@@ -27,7 +27,7 @@
             <label for="textinput-email" class="item item-input item-stacked-label" data-component="crn-input-floating">
               <span class="input-label">Email</span>
               <input type="text" placeholder="Email" ng-model="User.active.email" id="textinput-email" name="textinput-email">
-            </label><img src="{{User.active.picture || 'img/nophoto.png'}}" class="component-holder" style="" xattr-position="" data-component="crn-image" id="crn-image-850425" ng-click="cronapi.client('js.Imagem.ObterFotoMobile').run()">
+            </label>
             <!-- name begin -->
             <label for="textinput-name" class="item item-input item-stacked-label" data-component="crn-input-floating">
               <span class="input-label">{{'Users.view.Name' | translate}}</span>
@@ -41,7 +41,7 @@
             <!-- picture begin -->
             <label for="textinput-picture" class="item item-input item-stacked-label" data-component="crn-input-floating">
               <span class="input-label">{{'Admin.view.Picture' | translate}}</span>
-              <input type="text" placeholder="{{'Admin.view.Picture' | translate}}" ng-model="User.active.picture" id="textinput-picture" name="textinput-picture">
+              <input type="text" placeholder="{{'Admin.view.Picture' | translate}}" ng-model="User.active.picture" id="textinput-picture" name="textinput-picture" ng-click="">
             </label>
             <!-- password begin -->
             <label for="textinput-password" class="item item-input item-stacked-label" data-component="crn-input-floating">
